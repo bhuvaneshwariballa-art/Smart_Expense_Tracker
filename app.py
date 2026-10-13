@@ -140,6 +140,31 @@ div[data-testid="stVerticalBlock"] > div {animation:fadein .25s ease-out;}
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
 }
+
+/* Fix the category dropdown popup */
+div[data-baseweb="popover"],
+div[data-baseweb="popover"] > div,
+ul[role="listbox"],
+li[role="option"],
+div[role="listbox"],
+div[role="option"] {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+li[role="option"] *,
+div[role="option"] * {
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
+
+li[role="option"]:hover,
+div[role="option"]:hover,
+li[aria-selected="true"],
+div[aria-selected="true"] {
+    background-color: #e6e0ff !important;
+    color: #20243a !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
