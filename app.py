@@ -71,7 +71,7 @@ with st.sidebar:
     else:
         st.info("Local demo mode")
         st.caption("Google sign-in becomes active after auth secrets are configured.")
-    menu = st.radio("Navigate", ["Dashboard", "Add Expense", "View Expenses", "Edit Expense", "Delete Expenses", "Settings"])
+    menu = st.radio("Navigate", ["Dashboard", "Add Expense", "View Expenses", "Edit Expense", "Delete Expenses", "Settings"], key="menu")
     st.markdown("---")
     st.caption("Small steps today, better money habits tomorrow 🌱")
 
