@@ -50,6 +50,36 @@ h1,h2,h3,h4,h5,h6 {color:#211747 !important;}
 [data-testid="stDataFrame"] {border:1px solid #c9c2f4;border-radius:10px;}
 div[data-testid="stVerticalBlock"] > div {animation:fadein .25s ease-out;}
 @keyframes fadein {from{opacity:.85;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+
+/* Fix dark sections inside Streamlit form controls */
+.stApp [data-baseweb="input"] > div,
+.stApp [data-baseweb="input"] input,
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="select"] [role="combobox"],
+.stApp [data-baseweb="datepicker"] > div,
+.stApp [data-baseweb="datepicker"] input {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
+
+.stApp [data-baseweb="input"] button,
+.stApp [data-baseweb="datepicker"] button {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    border-color: #c9c2f4 !important;
+}
+
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+.stApp [role="option"] * {
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
