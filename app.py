@@ -206,6 +206,38 @@ div[data-baseweb="calendar"] button[aria-label*="month"],
 div[data-baseweb="calendar"] button[aria-label*="Month"] {
     color: #20243a !important;
 }
+
+/* Fix calendar popup visibility */
+.stApp [data-baseweb="datepicker"],
+.stApp [data-baseweb="datepicker"] * {
+    color: #20243a !important;
+}
+
+.stApp [data-baseweb="datepicker"] input {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
+
+[data-baseweb="calendar"],
+[data-baseweb="calendar"] * {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+[data-baseweb="calendar"] button {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+[data-baseweb="calendar"] button:hover {
+    background-color: #e6e0ff !important;
+}
+
+[data-baseweb="calendar"] [aria-selected="true"] {
+    background-color: #6d5bd0 !important;
+    color: #ffffff !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
