@@ -26,8 +26,26 @@ h1,h2,h3,h4,h5,h6 {color:#211747 !important;}
 .hero {padding:1.25rem 1.5rem;border-radius:22px;background:linear-gradient(120deg,#e0d7ff,#d9edff);border:1px solid #c6baf4;margin-bottom:1rem;}
 .hero h1 {margin:0;color:#211747 !important;}
 .hero p {margin:.4rem 0 0;color:#383151 !important;}
-input, textarea, [data-baseweb="select"] > div {color:#20243a !important;}
-[data-baseweb="input"] input, [data-baseweb="textarea"] textarea {color:#20243a !important;}
+/* Fix input field visibility */
+.stApp input,
+.stApp textarea,
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="input"] > div {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+    border-color: #c9c2f4 !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #6b7280 !important;
+    -webkit-text-fill-color: #6b7280 !important;
+}
+
+.stApp [data-baseweb="select"] span {
+    color: #20243a !important;
+}
 [data-testid="stAlert"] {color:#20243a !important;}
 [data-testid="stDataFrame"] {border:1px solid #c9c2f4;border-radius:10px;}
 div[data-testid="stVerticalBlock"] > div {animation:fadein .25s ease-out;}
