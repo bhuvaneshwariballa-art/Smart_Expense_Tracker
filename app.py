@@ -80,6 +80,66 @@ div[data-testid="stVerticalBlock"] > div {animation:fadein .25s ease-out;}
     color: #20243a !important;
     -webkit-text-fill-color: #20243a !important;
 }
+/* FINAL FIX: Number input, dropdown and date picker */
+
+/* All input containers */
+.stApp div[data-baseweb="input"],
+.stApp div[data-baseweb="select"],
+.stApp div[data-baseweb="base-input"],
+.stApp div[data-baseweb="datepicker"] {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+/* Number, text and date inputs */
+.stApp input,
+.stApp textarea {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+    caret-color: #20243a !important;
+}
+
+/* Number input +/- controls */
+.stApp [data-testid="stNumberInput"] button {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    border: 1px solid #c9c2f4 !important;
+}
+
+.stApp [data-testid="stNumberInput"] button svg {
+    fill: #20243a !important;
+    color: #20243a !important;
+}
+
+/* Category dropdown and its options */
+.stApp [data-baseweb="select"] *,
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
+
+/* Dropdown arrow */
+.stApp [data-baseweb="select"] svg {
+    fill: #20243a !important;
+    color: #20243a !important;
+}
+
+/* Date picker calendar */
+.stApp [data-baseweb="calendar"],
+.stApp [data-baseweb="calendar"] *,
+.stApp [data-baseweb="popover"] > div {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+/* Keep buttons readable */
+.stApp [data-testid="stFormSubmitButton"] button {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
