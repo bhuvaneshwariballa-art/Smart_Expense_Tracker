@@ -165,6 +165,47 @@ div[aria-selected="true"] {
     background-color: #e6e0ff !important;
     color: #20243a !important;
 }
+
+/* Fix expense date input and calendar popup */
+.stApp [data-testid="stDateInput"] input,
+.stApp [data-testid="stDateInput"] [data-baseweb="input"] input {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+    caret-color: #20243a !important;
+    border-color: #c9c2f4 !important;
+}
+
+/* Calendar popup background */
+div[data-baseweb="popover"] [data-baseweb="calendar"],
+div[data-baseweb="calendar"] {
+    background-color: #ffffff !important;
+    color: #20243a !important;
+}
+
+/* Calendar header, weekdays and day numbers */
+div[data-baseweb="calendar"] *,
+div[data-baseweb="calendar"] button {
+    color: #20243a !important;
+    -webkit-text-fill-color: #20243a !important;
+}
+
+/* Calendar day buttons */
+div[data-baseweb="calendar"] button {
+    background-color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+/* Hover on calendar dates */
+div[data-baseweb="calendar"] button:hover {
+    background-color: #e6e0ff !important;
+}
+
+/* Calendar navigation buttons */
+div[data-baseweb="calendar"] button[aria-label*="month"],
+div[data-baseweb="calendar"] button[aria-label*="Month"] {
+    color: #20243a !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
