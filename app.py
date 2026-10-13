@@ -71,7 +71,9 @@ with st.sidebar:
     else:
         st.info("Local demo mode")
         st.caption("Google sign-in becomes active after auth secrets are configured.")
-    menu = st.radio("Navigate", ["Dashboard", "Add Expense", "View Expenses", "Edit Expense", "Delete Expenses", "Settings"], key="menu")
+        if st.session_state.pop("jump_add",False):
+           st.session_state["nav_selection"] = "Add Expense"
+    menu = st.radio("Navigate", ["Dashboard", "Add Expense", "View Expenses", "Edit Expense", "Delete Expenses", "Settings"], key="nav_selection")
     st.markdown("---")
     st.caption("Small steps today, better money habits tomorrow 🌱")
 
@@ -90,7 +92,7 @@ if menu == "Dashboard":
     if df.empty:
         st.info("Your dashboard is ready! Add your first expense to see your insights. 🌼")
         if st.button("➕ Add my first expense", type="primary"):
-            st.session_state["menu"] = "Add Expense"
+            st.session_state["jump_add"] = True
             st.rerun()
     else:
         left, right = st.columns(2, gap="large")
