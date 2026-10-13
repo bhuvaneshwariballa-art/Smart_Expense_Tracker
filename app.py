@@ -238,6 +238,40 @@ div[data-baseweb="calendar"] button[aria-label*="Month"] {
     background-color: #6d5bd0 !important;
     color: #ffffff !important;
 }
+
+/* Force light theme on the date picker calendar */
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div,
+[data-baseweb="calendar"],
+[data-baseweb="calendar"] > div {
+    background: #ffffff !important;
+    color: #20243a !important;
+}
+
+[data-baseweb="calendar"] *,
+[data-baseweb="popover"] * {
+    color: #20243a !important;
+}
+
+[data-baseweb="calendar"] button {
+    background: #ffffff !important;
+    color: #20243a !important;
+    border: none !important;
+}
+
+[data-baseweb="calendar"] button:hover {
+    background: #e6e0ff !important;
+}
+
+[data-baseweb="calendar"] button[aria-selected="true"],
+[data-baseweb="calendar"] [aria-selected="true"] {
+    background: #6d5bd0 !important;
+    color: #ffffff !important;
+}
+
+[data-baseweb="calendar"] button:focus {
+    outline: 2px solid #6d5bd0 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
