@@ -90,7 +90,7 @@ if menu == "Dashboard":
     if df.empty:
         st.info("Your dashboard is ready! Add your first expense to see your insights. 🌼")
         if st.button("➕ Add my first expense", type="primary"):
-            st.session_state["jump_add"] = True
+            st.session_state["menu"] = "Add Expense"
             st.rerun()
     else:
         left, right = st.columns(2, gap="large")
